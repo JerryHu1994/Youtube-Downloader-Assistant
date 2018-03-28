@@ -3,6 +3,7 @@
 # University of Wisconsin-Madison
 # Author: Jieru Hu
 ##################################
+# This the main file for youtube downloading.
 
 import pafy
 import time
@@ -29,15 +30,18 @@ def main():
     #url, multi_thread = user_input()
 
 #    start_ts = time()
-    num_of_worker = 5
-    url1 = "https://www.youtube.com/watch?v=JB8d39D71Gs&t=148s"
-    url2 = "https://www.youtube.com/watch?v=XxI4VwewmPg&t=1023s"
-    url3 = "url3"
-    url4 = "url4"
-    url5 = "url5"
-    direct = "~/Downloads/"
+    num_of_worker = 3
+    url1 = "https://www.youtube.com/watch?v=JujrK0xApqw"
+    url2 = "https://www.youtube.com/watch?v=4SK9c5i7NGg"
+    url3 = "https://www.youtube.com/watch?v=NK5DTb2YrHg"
+    url4 = "https://www.youtube.com/watch?v=b9lwsIhQ7h0"
+    url5 = "https://www.youtube.com/watch?v=c4deK9apylY"
+    direct = "./data/"
     url_list = [url1, url2, url3, url4, url5]
     task_queue = Queue()
+
+
+    #crawl the page
 
     logger.info("Creating a pool of {} youtube downloaders".format(num_of_worker))
     # create workers
